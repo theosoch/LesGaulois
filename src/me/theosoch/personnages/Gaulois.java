@@ -10,7 +10,7 @@ public class Gaulois extends Combattant {
 		Gaulois g = new Gaulois("Astérix", 8);
 		Romain r = new Romain("César", 6);
 		
-		assert g.prendreParole() == "Le gaulois " + g.getNom() + " : ";
+		assert g.prendreParole().equals("Le gaulois " + g.getNom() + " : ");
 		
 		String text = "test";
 		g.parler(text);

@@ -9,6 +9,7 @@ public abstract class Combattant extends Personnage {
 	public Combattant(String nom, int force) {
 		super(nom);
 		
+		assert force >= 0;
 		this.force = force;
 	}
 

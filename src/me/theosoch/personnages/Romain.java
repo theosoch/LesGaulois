@@ -6,14 +6,14 @@ public class Romain extends Combattant {
 	
 	public static void main(String[] args) {
 		Gaulois g = new Gaulois("Astérix", 8);
-		Romain r = new Romain("César", 0);
+		Romain minus = new Romain("Minus", 6);
 		
-		assert r.prendreParole() == "Le romain " + r.getNom() + " : ";
+		assert minus.prendreParole().equals("Le romain " + minus.getNom() + " : ");
 		
 		String text = "test";
-		r.parler(text);
+		minus.parler(text);
 		
-		r.recevoirCoup(8/3);
+		minus.recevoirCoup(8/3);
 	}
 	
 	//	
@@ -32,10 +32,15 @@ public class Romain extends Combattant {
 	//	
 	
 	public void recevoirCoup(int forceCoup) {
-		force -= forceCoup;
+		assert this.force >= 0;
+		int tmp = this.force;
 		
-		if (force > 0) { parler("Aie"); }
+		this.force -= forceCoup;
+		
+		if (this.force > 0) { parler("Aie"); }
 		else { parler("J'abandonne..."); }
+		
+		assert this.force < tmp;
 	}
 	
 }
