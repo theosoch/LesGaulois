@@ -12,5 +12,9 @@ public abstract class Combattant extends Personnage {
 		assert force >= 0;
 		this.force = force;
 	}
+	
+	//
+	
+	public int getForce() { return this.force; }
 
 }

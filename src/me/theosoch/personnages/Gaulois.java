@@ -1,5 +1,6 @@
 package me.theosoch.personnages;
 
+import me.theosoch.infrastructure.Musee;
 import me.theosoch.personnages.bases.Combattant;
 
 //
@@ -26,6 +27,9 @@ public class Gaulois extends Combattant {
 
 	protected int effetPotion = 1;
 	
+	private int nbTrophees;
+	private Equipement[] trophees = new Equipement[100];
+	
 	//
 	
 	public Gaulois(String nom, int force) {
@@ -34,15 +38,30 @@ public class Gaulois extends Combattant {
 	
 	//
 	
-	@Override
+//	@Override
+//	protected String prendreParole() {
+//		return "Le gaulois " + this.getNom() + " : ";
+//	}
+	
+//	private String prendreParole() {
 	protected String prendreParole() {
-		return "Le gaulois " + this.getNom() + " : ";
+		return "Le gaulois " + nom + " : ";
 	}
 	
+//	public void frapper(Romain romain) {
+//		System.out.println(this.getNom() + " envoie un grand coup dans la machoire de " + romain.getNom());
+//		
+//		romain.recevoirCoup((this.force / 3) * this.effetPotion);
+//	}
+	
 	public void frapper(Romain romain) {
-		System.out.println(this.getNom() + " envoie un grand coup dans la machoire de " + romain.getNom());
+		System.out.println(nom + " envoie un grand coup dans lamâchoire de " + romain.getNom());
 		
-		romain.recevoirCoup((this.force / 3) * this.effetPotion);
+		Equipement[] returnedTrophees = romain.recevoirCoup((force / 3) * effetPotion);
+		
+		for (int i = 0; i < returnedTrophees.length && returnedTrophees[i] != null; i++, nbTrophees++) {
+			this.trophees[nbTrophees] = returnedTrophees[i];
+		}
 	}
 	
 	//
@@ -58,5 +77,25 @@ public class Gaulois extends Combattant {
 		this.effetPotion = force;
 		this.parler("Merci Druide, je sens que ma force est " + this.effetPotion + " fois décuplée.");
 	}
+	
+	//	
+	
+	public void faireUneDonation(Musee musee) {
+		if(this.nbTrophees > 0) {
+			this.parler("Je donne au musée tous mes trophées :");
+			
+			for(int i = 0; i < this.nbTrophees; ++i) {
+				this.parler(" - " + this.trophees[i]);
+				musee.donnerTrophee(this, this.trophees[i]);
+			}
+		}
+		else {
+			this.parler("Je n'ai aucun trophée à donner.");
+		}
+	}
+	
+	//
+	
+	
 	
 }

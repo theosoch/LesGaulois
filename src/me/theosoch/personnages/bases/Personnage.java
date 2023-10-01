@@ -2,7 +2,7 @@ package me.theosoch.personnages.bases;
 
 public abstract class Personnage {
 
-	private String nom;
+	protected String nom;
 	
 	//	
 	
@@ -19,7 +19,7 @@ public abstract class Personnage {
 	protected abstract String prendreParole();
 	
 	public void parler(String text) {
-		System.out.println(prendreParole() + "« " + text + " »");
+		System.out.println(prendreParole() + "ï¿½ " + text + " ï¿½");
 	}
 	
 }
