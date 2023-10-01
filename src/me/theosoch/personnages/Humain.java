@@ -23,9 +23,9 @@ public class Humain {
 	
 	//
 	
-	private void parler(String texte) {
+	protected void parler(String texte) {
 //		System.out.println("Humain " + this.getNom() + " parle : � " + texte + " �");
-		System.out.println(this.getNom() + " - " + texte);
+		System.out.println("(" + this.getNom() + ") - " + texte);
 	}
 	
 	//	

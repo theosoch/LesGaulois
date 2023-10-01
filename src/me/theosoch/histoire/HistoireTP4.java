@@ -1,5 +1,6 @@
 package me.theosoch.histoire;
 
+import me.theosoch.personnages.Commercant;
 import me.theosoch.personnages.Humain;
 
 //
@@ -16,6 +17,15 @@ public class HistoireTP4 {
 		
 		prof.acheter("un jeu", 2);
 		prof.acheter("un kimono", 50);
+		
+		Commercant marco = new Commercant("Marco", 20);
+		
+		marco.direBonjour();
+		
+		marco.setFaireExtorquer();
+		marco.recevoir(15);
+		
+		marco.boire();
 	}
 	
 }
