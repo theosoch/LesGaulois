@@ -2,6 +2,7 @@ package me.theosoch.histoire;
 
 import me.theosoch.personnages.Commercant;
 import me.theosoch.personnages.Humain;
+import me.theosoch.personnages.Yakuza;
 
 //
 
@@ -26,6 +27,12 @@ public class HistoireTP4 {
 		marco.recevoir(15);
 		
 		marco.boire();
+		
+		Yakuza yakulenoir = new Yakuza("Yaku Le Noir", "whisky", 30, "Warsong");
+		
+		yakulenoir.direBonjour();
+		
+		yakulenoir.extorquer(marco);
 	}
 	
 }
