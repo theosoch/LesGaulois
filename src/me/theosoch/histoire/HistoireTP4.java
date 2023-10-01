@@ -2,6 +2,7 @@ package me.theosoch.histoire;
 
 import me.theosoch.personnages.Commercant;
 import me.theosoch.personnages.Humain;
+import me.theosoch.personnages.Ronin;
 import me.theosoch.personnages.Yakuza;
 
 //
@@ -33,6 +34,12 @@ public class HistoireTP4 {
 		yakulenoir.direBonjour();
 		
 		yakulenoir.extorquer(marco);
+		
+		Ronin roro = new Ronin("Roro", "shochu", 60);
+		
+		roro.direBonjour();
+		
+		roro.donner(marco);
 	}
 	
 }
