@@ -82,12 +82,14 @@ public class Gaulois extends Combattant {
 	
 	public void faireUneDonation(Musee musee) {
 		if(this.nbTrophees > 0) {
-			this.parler("Je donne au musée tous mes trophées :");
+			String texte = "Je donne au musée tous mes trophées :";
 			
 			for(int i = 0; i < this.nbTrophees; ++i) {
-				this.parler(" - " + this.trophees[i]);
+				texte += "\n - " + this.trophees[i];
 				musee.donnerTrophee(this, this.trophees[i]);
 			}
+			
+			this.parler(texte);
 		}
 		else {
 			this.parler("Je n'ai aucun trophée à donner.");
