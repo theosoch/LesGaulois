@@ -2,6 +2,7 @@ package me.theosoch.histoire;
 
 import me.theosoch.personnages.Commercant;
 import me.theosoch.personnages.Ronin;
+import me.theosoch.personnages.Samourai;
 import me.theosoch.personnages.Yakuza;
 
 public class HistoireTP5 {
@@ -21,6 +22,14 @@ public class HistoireTP5 {
 		marco.listerConnaissances();
 		roro.listerConnaissances();
 		yaku.listerConnaissances();
+		
+		Samourai akimoto = new Samourai("Miyamoto", "Akimoto", "saké", 80);
+		
+		akimoto.repondre(marco);
+		marco.direBonjour();
+		akimoto.listerConnaissances();
+		
+		akimoto.boire("du thé");
 	}
 	
 }
