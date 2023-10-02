@@ -3,6 +3,7 @@ package me.theosoch.histoire;
 import me.theosoch.personnages.Commercant;
 import me.theosoch.personnages.Ronin;
 import me.theosoch.personnages.Samourai;
+import me.theosoch.personnages.Traitre;
 import me.theosoch.personnages.Yakuza;
 
 public class HistoireTP5 {
@@ -30,6 +31,23 @@ public class HistoireTP5 {
 		akimoto.listerConnaissances();
 		
 		akimoto.boire("du thé");
+		
+		Traitre masako = new Traitre("Miyamoto", "Masako", "whisky", 100);
+		
+		masako.faireLeGentil();
+		
+		masako.ranconner(kumi);
+		masako.ranconner(chonin);
+		masako.ranconner(marco);
+		
+		akimoto.faireConnaissance(masako);
+		
+		masako.ranconner(kumi);
+		
+		masako.faireConnaissance(yaku);
+		masako.faireLeGentil();
+		
+		masako.faireConnaissance(roro);
 	}
 	
 }

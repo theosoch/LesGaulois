@@ -28,6 +28,10 @@ public class Humain {
 	
 	public int getArgent() { return this.argent; }
 	
+	public int nombreConnaissances() { return this.nbConnaissances; }
+	
+	public final Humain[] connaissances() { return this.connaissances; }
+	
 	//
 	
 	protected void parler(String texte) {
@@ -77,13 +81,13 @@ public class Humain {
 	
 	private void memoriser(Humain h) {
 //		if(this.nbConnaissances < this.connaissances.length) {
-		if(this.nbConnaissances == this.connaissances.length) {
-			for(int i = 0; i < this.nbConnaissances-1; ++i)
+		if(this.nombreConnaissances() == this.connaissances.length) {
+			for(int i = 0; i < this.nombreConnaissances()-1; ++i)
 				this.connaissances[i] = this.connaissances[i+1];
 		}
 		
-		if(this.nbConnaissances < this.connaissances.length) {
-			this.connaissances[this.nbConnaissances] = h;
+		if(this.nombreConnaissances() < this.connaissances.length) {
+			this.connaissances[this.nombreConnaissances()] = h;
 			this.nbConnaissances++;
 		}
 		else this.connaissances[this.nbConnaissances-1] = h;
