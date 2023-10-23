@@ -26,7 +26,8 @@ public class Humain {
 	
 	public String getNom() { return this.nom; }
 	
-	public int getArgent() { return this.argent; }
+	// Nécéssaire pour les classes héritiées
+	protected int getArgent() { return this.argent; }
 	
 	public int nombreConnaissances() { return this.nbConnaissances; }
 	
