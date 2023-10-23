@@ -79,7 +79,7 @@ public class Humain {
 		this.memoriser(h);
 	}
 	
-	private void memoriser(Humain h) {
+	protected void memoriser(Humain h) {
 //		if(this.nbConnaissances < this.connaissances.length) {
 		if(this.nombreConnaissances() == this.connaissances.length) {
 			for(int i = 0; i < this.nombreConnaissances()-1; ++i)

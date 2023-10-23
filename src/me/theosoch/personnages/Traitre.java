@@ -18,7 +18,9 @@ public class Traitre extends Samourai {
 	
 	//	
 	
+	@Override
 	public void direBonjour() {
+		super.direBonjour();
 		this.parler("Mais je suis un traître et mon niveau de traîtrise est : " + this.niveauTraitrise + ". Chut !");
 	}
 	

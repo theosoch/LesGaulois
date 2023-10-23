@@ -1,6 +1,8 @@
 package me.theosoch.histoire;
 
 import me.theosoch.personnages.Commercant;
+import me.theosoch.personnages.GrandMere;
+import me.theosoch.personnages.Humain;
 import me.theosoch.personnages.Ronin;
 import me.theosoch.personnages.Samourai;
 import me.theosoch.personnages.Traitre;
@@ -24,6 +26,8 @@ public class HistoireTP5 {
 		roro.listerConnaissances();
 		yaku.listerConnaissances();
 		
+		//		
+		
 		Samourai akimoto = new Samourai("Miyamoto", "Akimoto", "saké", 80);
 		
 		akimoto.repondre(marco);
@@ -31,6 +35,8 @@ public class HistoireTP5 {
 		akimoto.listerConnaissances();
 		
 		akimoto.boire("du thé");
+		
+		//		
 		
 		Traitre masako = new Traitre("Miyamoto", "Masako", "whisky", 100);
 		
@@ -48,6 +54,23 @@ public class HistoireTP5 {
 		masako.faireLeGentil();
 		
 		masako.faireConnaissance(roro);
+		
+		Samourai akira = new Traitre("Miyamoto", "Akira", "whisky", 50);
+		Ronin hiro = new Traitre("Miyamoto", "Hiro", "saké", 20);
+		Humain nori = new Traitre("Miyamoto", "Nori", "whisky", 70);
+		
+		//		
+		
+		GrandMere grandMere = new GrandMere("Grand-Mère", 10);
+		
+		grandMere.faireConnaissance(akimoto);
+		grandMere.faireConnaissance(yaku);
+		grandMere.faireConnaissance(masako);
+		grandMere.faireConnaissance(kumi);
+		grandMere.faireConnaissance(marco);
+		grandMere.faireConnaissance(chonin);
+		
+		grandMere.ragoter();
 	}
 	
 }

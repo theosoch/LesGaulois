@@ -59,9 +59,8 @@ public class Gaulois extends Combattant {
 		
 		Equipement[] returnedTrophees = romain.recevoirCoup((force / 3) * effetPotion);
 		
-		for (int i = 0; i < returnedTrophees.length && returnedTrophees[i] != null; i++, nbTrophees++) {
+		for (int i = 0; i < returnedTrophees.length && returnedTrophees[i] != null; i++, nbTrophees++)
 			this.trophees[nbTrophees] = returnedTrophees[i];
-		}
 	}
 	
 	//
