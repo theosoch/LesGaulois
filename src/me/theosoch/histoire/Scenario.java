@@ -6,8 +6,6 @@ import me.theosoch.personnages.Equipement;
 import me.theosoch.personnages.Gaulois;
 import me.theosoch.personnages.Romain;
 
-//import villagegaulois.Musee;
-
 public class Scenario {
 
 	public static void main(String[] args) {

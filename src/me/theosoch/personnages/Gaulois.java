@@ -38,21 +38,9 @@ public class Gaulois extends Combattant {
 	
 	//
 	
-//	@Override
-//	protected String prendreParole() {
-//		return "Le gaulois " + this.getNom() + " : ";
-//	}
-	
-//	private String prendreParole() {
 	protected String prendreParole() {
 		return "Le gaulois " + nom + " : ";
 	}
-	
-//	public void frapper(Romain romain) {
-//		System.out.println(this.getNom() + " envoie un grand coup dans la machoire de " + romain.getNom());
-//		
-//		romain.recevoirCoup((this.force / 3) * this.effetPotion);
-//	}
 	
 	public void frapper(Romain romain) {
 		System.out.println(nom + " envoie un grand coup dans lamâchoire de " + romain.getNom());
