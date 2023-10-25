@@ -71,7 +71,7 @@ public class Gaulois extends Combattant {
 		if(this.nbTrophees > 0) {
 			String texte = "Je donne au musée tous mes trophées :";
 			
-			for(int i = 0; i < this.nbTrophees; ++i) {
+			for(int i = 0; i < this.nbTrophees; i++) {
 				texte += "\n - " + this.trophees[i];
 				musee.donnerTrophee(this, this.trophees[i]);
 			}

@@ -9,12 +9,6 @@ public class Musee {
 	private Trophee[] trophee = new Trophee[200];
 	private int nbTrophee = 0;
 	
-	//	
-	
-	public Musee() {
-		
-	}
-	
 	//
 	
 	public void donnerTrophee(Gaulois gaulois, Equipement equipement) {
@@ -30,16 +24,17 @@ public class Musee {
 	//
 	
 	public String extraireInstructionsCaml() {
-		String result = "let musee = [ ";
+		StringBuilder resultBuilder = new StringBuilder();
+		resultBuilder.append("let musee = [ ");
 		
-		for(int i = 0; i < this.nbTrophee; ++i) {
-			result += "(\"" + this.trophee[i].donnerNom() + "\", \"" + this.trophee[i].getEquipement() + "\")";
-			if(i < this.nbTrophee-1) result += "; ";
+		for(int i = 0; i < this.nbTrophee; i++) {
+			resultBuilder.append("(\"" + this.trophee[i].donnerNom() + "\", \"" + this.trophee[i].getEquipement() + "\")");
+			if(i < this.nbTrophee-1) { resultBuilder.append("; "); }
 		}
 		
-		result += " ] ;;";
+		resultBuilder.append(" ] ;;");
 		
-		return result;
+		return resultBuilder.toString();
 	}
 	
 }

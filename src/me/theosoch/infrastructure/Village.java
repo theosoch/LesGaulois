@@ -61,7 +61,6 @@ public class Village {
 	}
 	
 	public Gaulois trouverHabitant(int numVillageois) {
-//		if(numVillageois >= 0 && numVillageois < this.nbVillageois)
 		return this.villageois[numVillageois];
 	}
 	
@@ -69,9 +68,9 @@ public class Village {
 	
 	public void afficherVillageois() {
 		System.out.println("Dans le village du chef " + this.chef.getNom() + "vivent les légendaires gaulois :");
-		for(int i = 0; i < this.nbVillageois; ++i) {
+		for(int i = 0; i < this.nbVillageois; i++) {
 			Gaulois g = this.villageois[i];
-			if(g != chef) System.out.println(" - " + g.getNom());
+			if(g != chef) { System.out.println(" - " + g.getNom()); }
 		}
 	}
 	

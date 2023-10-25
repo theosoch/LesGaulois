@@ -37,15 +37,15 @@ public class Druide extends Personnage {
 		Random rand = new Random();
 		
 		this.forcePotion = effetPotionMin + rand.nextInt(effetPotionMax - effetPotionMin);
-		if(this.forcePotion > 7 ) this.parler("J'ai préparé une super potion de force " + this.forcePotion);
-		else this.parler("Je n'ai pas trouvé tous les ingrédients, ma potion est seulement de force " + this.forcePotion);
+		if(this.forcePotion > 7 ) { this.parler("J'ai préparé une super potion de force " + this.forcePotion); }
+		else { this.parler("Je n'ai pas trouvé tous les ingrédients, ma potion est seulement de force " + this.forcePotion); }
 	}
 	
 	//	
 	
 	public void booster(Gaulois gaulois) {
-		if(gaulois.getNom().equals("Obélix")) this.parler("Non, Obélix !... Tu n’auras pas de potion magique !");
-		else gaulois.boirePotion(this.forcePotion);
+		if(gaulois.getNom().equals("Obélix")) { this.parler("Non, Obélix !... Tu n’auras pas de potion magique !"); }
+		else { gaulois.boirePotion(this.forcePotion); }
 	}
 	
 }

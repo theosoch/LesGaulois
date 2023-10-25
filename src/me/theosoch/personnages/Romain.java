@@ -67,7 +67,7 @@ public class Romain extends Combattant {
 
 		int resistanceEquipement = 0;
 
-		if (nbEquipement != 0) {
+		if(nbEquipement != 0) {
 			texte += "\nMais heureusement, grace à mon équipement sa force est diminué de ";
 
 			for (int i = 0; i < nbEquipement; i++) {
@@ -122,10 +122,12 @@ public class Romain extends Combattant {
 				break;
 	
 			case 1:
-				if (equipement == this.equipements[0])
+				if (equipement == this.equipements[0]) {
 					System.out.println("Le soldat " + this.getNom() + " possède déjà un " + equipement);
-				else
+				}
+				else {
 					this.forcerAsEquiper(equipement);
+				}
 				break;
 	
 			default:
